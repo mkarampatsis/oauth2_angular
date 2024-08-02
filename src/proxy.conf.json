@@ -1,6 +1,10 @@
 {
-    "/api": {
-        "target": "https://test.gsis.gr/oauth2servergov/.well-known/openid-configuration",
-        "secure": false
+   "/api": {
+    "target": "https://test.gsis.gr",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
     }
+  }
 }

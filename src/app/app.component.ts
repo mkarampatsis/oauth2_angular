@@ -3,7 +3,7 @@ import { CommonModule} from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Oauth2Service } from './services/oauth2.service';
 import { Router } from '@angular/router';
-import { CLIENT_ID } from './shared/config';
+// import { CLIENT_ID } from './shared/config';
 
 @Component({
   selector: 'app-root',
@@ -31,21 +31,4 @@ export class AppComponent {
     let profile:any = this.authService.getProfile(); 
     return profile ? profile: null;
   }
-
-//   get showData() {
-//     let profile = this.authService.getProfile();
-//     console.log("profile>>>",profile);
-//     return profile ? profile : null;
-//   }
-
-  // authService = inject(AuthService)
-  
-  // login() {
-  //   this.authService.login();
-  // }
-
-  // logout() {
-  //   this.authService.logout();
-  // }
-
 }

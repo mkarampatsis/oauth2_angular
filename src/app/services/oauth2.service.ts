@@ -15,7 +15,8 @@ export class Oauth2Service {
 
   initConfiguration() {
     const authConfig: AuthConfig = {
-        issuer: 'https://test.gsis.gr/oauth2servergov',
+        issuer: 'https://test.gsis.gr',
+        // issuer: '/api/oauth2servergov/',
         clientId: CLIENT_ID,
         dummyClientSecret: CLIENT_PWD,
         redirectUri: 'http://localhost:4200',
@@ -31,6 +32,7 @@ export class Oauth2Service {
         responseType: 'code',
         strictDiscoveryDocumentValidation: false,
         showDebugInformation: true,  // Turn off debug mode,
+        // requireHttps: false
     };
 
     this.oAuthService.configure(authConfig);
